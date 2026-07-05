@@ -48,7 +48,7 @@ b = tf.constant([1, 2, 3])
 print(a + b)
 
 # matrix operations
-#matmul → matrix multiplication
+# matmul → matrix multiplication
 a = tf.constant([
     [1, 2],
     [3, 4]
@@ -58,7 +58,7 @@ b = tf.constant([
     [7, 8]
 ])
 
-print(tf.matmul(a,b))
+print(tf.matmul(a, b))
 
 # Slicing Indexing
 x = tf.constant([10, 20, 30])
@@ -76,8 +76,39 @@ print(m[:, 1])
 
 # type casting
 x = tf.constant([1, 2, 3], dtype=tf.int32)
-y = tf.cast(x,tf.float32)
+y = tf.cast(x, tf.float32)
 print(y)
 
 # shape manipulation
 x = tf.constant([1, 2, 3, 4, 5, 6])
+print(tf.reshape(x, (2, 3)))
+
+# faltten
+x = tf.constant([
+    [1, 2, 3, 4, 5, 6],
+    [7, 8, 9, 10, 11, 12]
+])
+
+f = tf.reshape(x, (-1,))
+print(f)
+
+# operations
+a = tf.constant([
+    [1, 2],
+    [3, 4]
+])
+
+b = tf.constant([
+    [10, 20],
+    [30, 40]
+])
+
+print("a + b : ", a + b)
+print("a - b : ", a - b)
+print("a * b : ", a * b)
+print("a / b : ", a / b)
+print("sum : ", tf.reduce_sum(a))
+print("Axis 0 : ", tf.reduce_sum(a, axis=0))
+print("Axis 1 : ", tf.reduce_sum(a, axis=1))
+print("matmul : ", tf.matmul(a, b))
+print("reshape : ", tf.reshape(a, (1, 4)))
