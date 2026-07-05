@@ -3,7 +3,7 @@ from custom import MyCallback
 
 # callback -> Execute a piece of code at specific times during training.
 
-checkpoint = tf.keras.callbacks.ModelCheckPoint(
+checkpoint = tf.keras.callbacks.ModelCheckpoint(
     filepath='./best.keras',
     save_best_only=True,  # if this be false , call back save all epochs, if true then save only best epoch
     monitor='val_loss',  # Which criterion should be examined? loss,accuracy,va_accuracy,val_loss
