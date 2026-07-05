@@ -55,3 +55,6 @@ model.fit(
     epochs=10,
     callbacks=callbacks
 )
+
+predict = model.predict(np.random.random((1,128)).astype(np.float32))
+print(predict)
