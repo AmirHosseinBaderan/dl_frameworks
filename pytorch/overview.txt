@@ -1,0 +1,14 @@
+| TensorFlow                 | PyTorch                    |
+| -------------------------- | -------------------------- |
+| `tf.Tensor`                | `torch.Tensor`             |
+| `tf.Variable`              | `nn.Parameter`             |
+| `Dense`                    | `Linear`                   |
+| `Sequential`               | `nn.Sequential`            |
+| `Model`                    | `nn.Module`                |
+| `GradientTape`             | `loss.backward()`          |
+| `model.fit()`              | حلقه آموزش دستی            |
+| `tf.data.Dataset`          | `torch.utils.data.Dataset` |
+| `tf.keras.optimizers.Adam` | `torch.optim.Adam`         |
+
+install pytorch
+pip3 install torch torchvision torchaudio
