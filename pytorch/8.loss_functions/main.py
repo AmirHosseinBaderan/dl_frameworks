@@ -52,3 +52,23 @@ Which loss function should be used, and when?
 | Multi-Class Classification      | `nn.CrossEntropyLoss()`  |
 
 """
+
+"""
+| Issue                | Correct answer      |
+| ---------------------| ------------------- |
+| House prices         |  MSE یا Huber       |
+| Spam Detection       |  BCEWithLogitsLoss  |
+| MNIST                |  CrossEntropyLoss   |
+| Temperature forecast |  MSE or Huber |
+"""
+
+# for multi class -> nn.CrossEntropyLoss() , for multi label -> nn.BCEWithLogitsLoss()
+
+"""
+| Problem Type               | Output Format                  | Loss                    |
+| -------------------------- | ------------------------------ | ----------------------- |
+| Regression                 | A numerical value              | `MSELoss` / `HuberLoss` |
+| Binary Classification      | One of two states              | `BCEWithLogitsLoss`     |
+| Multi-Class Classification | Exactly one class**            | `CrossEntropyLoss`      |
+| Multi-Label Classification | Zero, one, or multiple classes simultaneously** | `BCEWithLogitsLoss`     |
+"""
